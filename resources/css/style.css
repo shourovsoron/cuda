@@ -86,7 +86,7 @@ h2::after{
 }
 
 section{
-    padding: 10rem 0rem;
+    padding: 11rem 0rem;
 }
 
 .btn:link,
@@ -104,6 +104,90 @@ section{
     display: inline-block;
     margin-top: 4.5rem;
 }
+
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 2rem;
+    width: 100%;
+    background: #87509c;
+    z-index: 999;
+    box-shadow: 0px -2px 23px #000000c7;
+    padding-bottom: 2rem;
+    animation: sticky-anim .2s linear;
+}
+
+
+.mobile-menu{
+    float: right;
+    font-size: 3.5rem;
+    color: #fff;
+    margin-right: 1rem;
+    display: none;
+    cursor: pointer;
+
+}
+
+.mobile-menu-drawer{
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    height: 100vh;
+    z-index: 999;
+    background: #000000f1;
+    width: 70vw;
+    transition: .5s;
+    
+
+}
+
+.open-mobile-menu{
+    transform: translateX(0);
+    
+ 
+    
+}
+
+
+.mobile-drawer-inner{
+    position: relative;
+}
+.mobile-drawer-inner ul{
+   padding-top: 10rem;
+
+  
+}
+
+.mobile-drawer-inner li{
+    width: 100%;
+    margin-top: 5rem;
+    text-align: center;
+
+
+}
+
+.mobile-drawer-inner li a{
+    text-decoration: none;
+    color: #fff;
+}
+.close-drawer{
+    position: absolute;
+    font-size: 3.5rem;
+    cursor: pointer;
+    color: #fff;
+    top: 2rem;
+    right: 2rem;
+
+}
+
+@keyframes sticky-anim {
+    from {top: -100%;}
+    to {top: 0px;}
+}
+
 /* =====Header Section Start */
 header{
    
@@ -112,8 +196,9 @@ header{
     background-size: cover;
     background-position: fixed;
     background-attachment: fixed;
-    height: 85vh;
+    height: 90vh;
     position: relative;
+    padding-top: 3.5rem;
 }
 
 /* nav{
@@ -124,14 +209,14 @@ header{
 .logo{
     height: 3.5rem;
     width: auto;
-    margin-top: 3.5rem;
+   
     float: left;
 
 }
 
 .main-nav{
     float: right;
-    margin-top: 4.0rem;
+    margin-top: .5rem;
 }
 
 .main-nav li{
@@ -171,9 +256,7 @@ header{
 .main-nav li a:visited {
     background: #643a79;
     display: inline-block;
-    padding: .3rem 1.6rem;
-
-    
+    padding: .3rem 1.6rem;    
 }
 
 .active{
@@ -185,13 +268,13 @@ header{
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 100%;
+    max-width: 114rem;
     transform: translate(-50%, -50%);
     text-align: center;
 
-    
-    
-
 }
+
 .hero-text-box h1{
     /* text-align: center; */
 }
@@ -313,6 +396,7 @@ header{
 .skills .box{
     text-align: center;
     margin-top: 5rem;
+    overflow: hidden;
 }
 
 .skills .box h3{
@@ -324,6 +408,7 @@ header{
     display: inline-block;
     width: 18rem;
     height: 18rem;
+ 
 }
 
 
@@ -382,7 +467,7 @@ header{
     margin-left: 1rem;
     border-radius: .4rem;
     text-transform: uppercase;
-    min-width: 9.4rem;
+    min-width: 10rem;
     background: #ebc985;
 }
 
@@ -400,7 +485,7 @@ header{
    margin-top: 5rem;
    margin-bottom: 2.5rem;
    width: 100%;
-   height: 30rem;
+   height: auto;
 }
 
 .portfolio-section .row .box h4{
@@ -544,7 +629,7 @@ header{
     font-size: 1.8rem;
     border-radius: 4px;
     padding: 1rem;
-    height: 18rem;
+    height: 20rem;
     margin-top: 2rem;
     outline: none;
     color: #fff;
@@ -571,3 +656,37 @@ header{
 
 
 /* Contact section end */
+
+
+/* =======Footer Section Design====== */
+
+.footer-section{
+    background-color: #344b8e;
+    padding: 3rem 0rem;
+    text-align: center;
+
+}
+
+.footer-section .row ul{
+    text-align: center;
+
+}
+
+.footer-section .row ul li{
+    display: inline-block;
+    margin-left: 1rem;
+    
+}
+
+.footer-section .row ul li:first-child{
+    margin-left: 0;
+}
+
+.footer-section .row ul li a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 1rem 2rem;
+
+}
