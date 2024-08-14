@@ -259,7 +259,7 @@ header{
     padding: .3rem 1.6rem;    
 }
 
-.active{
+.main-nav li .active{
     border-radius: .3rem;
     background: #643a79;
 }

@@ -63,12 +63,16 @@ $(document).ready(function () {
   
           }, 1000);
         }
+
+        if (lastScroll == 0) {
+          navbar.classList.remove("sticky");
+        }
       }
 
-      if (currentScroll == 0) {
-        navbar.classList.remove("sticky");
+      // if (currentScroll == 0) {
+      //   navbar.classList.remove("sticky");
 
-      }
+      // }
     };
   }
 
@@ -105,12 +109,12 @@ $(document).ready(function () {
       e.target.classList.add("active");
     }
 
-    let currentScroll =
-      document.documentElement.scrollTop || document.body.scrollTop;
+    // let currentScroll =
+    //   document.documentElement.scrollTop || document.body.scrollTop;
 
-    if (currentScroll >= 0) {
-      navbar.classList.remove("sticky");
-    }
+    // if (currentScroll >= 0) {
+    //   navbar.classList.remove("sticky");
+    // }
   });
 
   logo.addEventListener("click", (e) => {
