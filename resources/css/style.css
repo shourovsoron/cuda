@@ -242,7 +242,7 @@ header{
     
 }
 
-.main-nav li:hover a:link,
+/* .main-nav li:hover a:link,
 .main-nav li:hover a:visited {
     color: #fff;
     text-decoration: none;
@@ -251,15 +251,15 @@ header{
     padding: .3rem 1.6rem;
     border-radius: .3rem;
     
-}
+} */
 
-.main-nav li a:visited {
+/* .main-nav li a:visited {
     background: #643a79;
     display: inline-block;
     padding: .3rem 1.6rem;    
-}
+} */
 
-.main-nav li .active{
+.main-nav .active{
     border-radius: .3rem;
     background: #643a79;
 }

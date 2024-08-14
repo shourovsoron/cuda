@@ -28,7 +28,7 @@ $(document).ready(function () {
   //Navigation Menu
 
   let navbar = document.getElementById("navbar");
-  let logo = document.querySelector(".logo");
+
 
   function scrollDetect() {
     var lastScroll = 0;
@@ -36,6 +36,8 @@ $(document).ready(function () {
     window.onscroll = function () {
       let currentScroll =
         document.documentElement.scrollTop || document.body.scrollTop; // Get Current Scroll Value
+
+        console.log(currentScroll);
 
       if (currentScroll > 0 && lastScroll <= currentScroll) {
         lastScroll = currentScroll;
@@ -56,12 +58,12 @@ $(document).ready(function () {
           navbar.classList.remove("sticky");
         } else {
 
-          setTimeout(() => {
-            if(lastScroll == currentScroll){
-              navbar.classList = "sticky";
-            }
+          // setTimeout(() => {
+          //   if(lastScroll == currentScroll){
+          //     navbar.classList = "sticky";
+          //   }
   
-          }, 1000);
+          // }, 1000);
         }
 
         if (lastScroll == 0) {
@@ -69,14 +71,21 @@ $(document).ready(function () {
         }
       }
 
-      // if (currentScroll == 0) {
-      //   navbar.classList.remove("sticky");
-
-      // }
     };
+
+    
+    if (currentScroll == 0) {
+      navbar.classList.remove("sticky");
+
+    }
   }
 
   scrollDetect();
+
+
+});
+
+
 
   //======JS for Mobile Menu
 
@@ -84,8 +93,12 @@ $(document).ready(function () {
   const mobileDrawerBtn = document.querySelector(".mobile-menu-open");
   const mobileDrawerCloseBtn = document.querySelector(".close-drawer");
   const mobileMenuItem = document.querySelector(".mobile-menu-items");
+  const ActivedMenu = document.querySelector(".active");
+  let logo = document.querySelector(".logo");
+
 
   const mainMenu = document.querySelector(".main-nav");
+  console.log(mainMenu)
 
   mobileDrawerBtn.addEventListener("click", () => {
     mobileDrawer.classList.add("open-mobile-menu");
@@ -99,15 +112,20 @@ $(document).ready(function () {
     if (e.target.tagName == "A") {
       mobileDrawer.classList.remove("open-mobile-menu");
     }
-    e.target.classList.add("active");
+    
   });
 
   mainMenu.addEventListener("click", (e) => {
-    const ActivedMenu = document.querySelector(".active");
-    if (ActivedMenu) {
-      ActivedMenu.classList.remove("active");
-      e.target.classList.add("active");
+   
+
+    if (e.target.tagName == "A") {
+     
+      if (ActivedMenu) {
+        ActivedMenu.classList.remove("active");
+        e.target.classList.add("active");
+      }
     }
+   
 
     // let currentScroll =
     //   document.documentElement.scrollTop || document.body.scrollTop;
@@ -117,15 +135,15 @@ $(document).ready(function () {
     // }
   });
 
-  logo.addEventListener("click", (e) => {
+  logo.addEventListener("click", () => {
     const ActivedMenu = document.querySelector(".active");
     const home = document.querySelector(".main-nav li:first-child");
     ActivedMenu.classList.remove("active");
     home.classList.add("active");
+
 
     // let currentScroll =
     //   document.documentElement.scrollTop || document.body.scrollTop;
     //   navbar.classList.remove("sticky");
 
   });
-});
