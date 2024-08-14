@@ -93,7 +93,7 @@ $(document).ready(function () {
   const mobileDrawerBtn = document.querySelector(".mobile-menu-open");
   const mobileDrawerCloseBtn = document.querySelector(".close-drawer");
   const mobileMenuItem = document.querySelector(".mobile-menu-items");
-  const ActivedMenu = document.querySelector(".active");
+
   let logo = document.querySelector(".logo");
 
 
@@ -116,7 +116,7 @@ $(document).ready(function () {
   });
 
   mainMenu.addEventListener("click", (e) => {
-   
+    const ActivedMenu = document.querySelector(".active");
 
     if (e.target.tagName == "A") {
      
