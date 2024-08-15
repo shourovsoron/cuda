@@ -154,10 +154,11 @@ section{
 
 .mobile-drawer-inner{
     position: relative;
-    overflow-y: scroll;
+  
 }
 .mobile-drawer-inner ul{
    padding-top: 10rem;
+   overflow-y: scroll;
 
   
 }
@@ -173,6 +174,7 @@ section{
 .mobile-drawer-inner li a{
     text-decoration: none;
     color: #fff;
+    font-size: 2.7rem;
 }
 .close-drawer{
     position: absolute;

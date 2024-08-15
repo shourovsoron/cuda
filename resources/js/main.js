@@ -85,7 +85,7 @@ $(document).ready(function () {
       {
         scrollTop: $(hash).offset().top,
       },
-      800,
+      500,
       function () {
         window.location.hash = hash;
       }
