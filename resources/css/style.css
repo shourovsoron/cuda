@@ -154,6 +154,7 @@ section{
 
 .mobile-drawer-inner{
     position: relative;
+    overflow-y: scroll;
 }
 .mobile-drawer-inner ul{
    padding-top: 10rem;
@@ -163,7 +164,7 @@ section{
 
 .mobile-drawer-inner li{
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 3rem;
     text-align: center;
 
 
