@@ -49,7 +49,7 @@ $(document).ready(function () {
             navbar.classList = "sticky";
           }
 
-        }, 1000);
+        }, 300);
 
       } else {
         lastScroll = currentScroll;
